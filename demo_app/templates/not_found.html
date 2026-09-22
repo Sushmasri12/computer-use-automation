@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Member Lookup Result</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f6f8;
+            margin: 0;
+        }
+
+        header {
+            background: #1f2937;
+            color: white;
+            padding: 20px 30px;
+        }
+
+        .container {
+            width: 600px;
+            margin: 80px auto;
+            background: white;
+            padding: 30px;
+            border: 1px solid #ccc;
+        }
+
+        .message {
+            padding: 15px;
+            border: 1px solid #999;
+            margin: 20px 0;
+        }
+
+        .label {
+            font-weight: bold;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h2>Member Servicing Portal</h2>
+</header>
+
+<div class="container">
+
+    <h1>Member Lookup Result</h1>
+
+    <div class="message" id="business-outcome">
+        {{ message }}
+    </div>
+
+    <p>
+        <span class="label">Requested Member ID:</span>
+        <span id="requested-member-id">{{ member_id }}</span>
+    </p>
+
+    <a class="back-link" href="/">
+        Back to Member Lookup
+    </a>
+
+</div>
+
+</body>
+</html>

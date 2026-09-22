@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Member Servicing Portal</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f6f8;
+            margin: 0;
+        }
+
+        header {
+            background: #1f2937;
+            color: white;
+            padding: 20px 30px;
+        }
+
+        .container {
+            width: 600px;
+            margin: 80px auto;
+            background: white;
+            padding: 30px;
+            border: 1px solid #ccc;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+
+        input {
+            width: 100%;
+            padding: 12px;
+            box-sizing: border-box;
+            margin-bottom: 20px;
+        }
+
+        button {
+            padding: 12px 20px;
+            cursor: pointer;
+        }
+
+        .hint {
+            margin-top: 25px;
+            color: #666;
+            font-size: 14px;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h2>Member Servicing Portal</h2>
+</header>
+
+<div class="container">
+
+    <h1>Member Lookup</h1>
+
+    <p>Enter a member ID to retrieve the member record.</p>
+
+    <form action="/member/search" method="POST">
+
+        <label for="member-id">Member ID</label>
+
+        <input
+            id="member-id"
+            name="member_id"
+            type="text"
+            autocomplete="off"
+            placeholder="Enter member ID"
+            required
+        >
+
+        <button type="submit">
+            Search Member
+        </button>
+
+    </form>
+
+    <p class="hint">
+        Demo member IDs: 12345 and 67890
+    </p>
+
+</div>
+
+</body>
+</html>

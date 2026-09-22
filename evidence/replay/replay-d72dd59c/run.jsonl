@@ -1,0 +1,7 @@
+{"timestamp": "2026-09-21T14:50:56.108707+00:00", "run_id": "replay-d72dd59c", "run_type": "replay", "event_type": "replay_started", "data": {"capability": "lookup_member_savings_balance", "version": "1.0.0"}}
+{"timestamp": "2026-09-21T14:50:57.033669+00:00", "run_id": "replay-d72dd59c", "run_type": "replay", "event_type": "step_started", "data": {"step_id": "step_1", "action": "navigate", "description": "Open the member servicing portal."}}
+{"timestamp": "2026-09-21T14:50:57.143598+00:00", "run_id": "replay-d72dd59c", "run_type": "replay", "event_type": "step_completed", "data": {"step_id": "step_1", "action": "navigate"}}
+{"timestamp": "2026-09-21T14:50:57.188576+00:00", "run_id": "replay-d72dd59c", "run_type": "replay", "event_type": "step_started", "data": {"step_id": "step_2", "action": "type", "description": "Enter the requested member ID to retrieve the member record"}}
+{"timestamp": "2026-09-21T14:50:57.213997+00:00", "run_id": "replay-d72dd59c", "run_type": "replay", "event_type": "step_completed", "data": {"step_id": "step_2", "action": "type"}}
+{"timestamp": "2026-09-21T14:50:57.220605+00:00", "run_id": "replay-d72dd59c", "run_type": "replay", "event_type": "step_started", "data": {"step_id": "step_3", "action": "click", "description": "Submit member ID 12345 to retrieve the member record and view the savings balance."}}
+{"timestamp": "2026-09-21T14:50:57.419400+00:00", "run_id": "replay-d72dd59c", "run_type": "replay", "event_type": "step_completed", "data": {"step_id": "step_3", "action": "click"}}

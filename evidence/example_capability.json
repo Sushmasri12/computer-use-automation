@@ -1,0 +1,147 @@
+{
+  "schema_version": "1.0",
+  "capability_name": "lookup_member_savings_balance",
+  "capability_version": "1.0.0",
+  "description": "Look up a member by member ID and return the member's current savings balance.",
+  "target_app": "member_servicing_portal",
+  "entry_point": "http://127.0.0.1:5000",
+  "inputs": [
+    {
+      "name": "member_id",
+      "type": "string",
+      "required": true,
+      "description": "Member identifier used for lookup."
+    }
+  ],
+  "outputs": [
+    {
+      "name": "savings_balance",
+      "type": "string",
+      "description": "Value extracted for savings_balance."
+    }
+  ],
+  "steps": [
+    {
+      "id": "step_1",
+      "action": "navigate",
+      "description": "Open the member servicing portal.",
+      "locator": null,
+      "value": "http://127.0.0.1:5000",
+      "output_name": null,
+      "risk": "safe",
+      "timeout_ms": 5000
+    },
+    {
+      "id": "step_2",
+      "action": "type",
+      "description": "Enter the requested member ID to look up the member record",
+      "locator": {
+        "strategy": "label",
+        "value": "Member ID",
+        "fallback": null
+      },
+      "value": "{{member_id}}",
+      "output_name": null,
+      "risk": "safe",
+      "timeout_ms": 5000
+    },
+    {
+      "id": "step_3",
+      "action": "click",
+      "description": "Submit the member lookup form for member ID {{member_id}} to retrieve their record",
+      "locator": {
+        "strategy": "role",
+        "value": "Search Member",
+        "fallback": null
+      },
+      "value": null,
+      "output_name": null,
+      "risk": "safe",
+      "timeout_ms": 5000
+    },
+    {
+      "id": "step_4",
+      "action": "click",
+      "description": "Submit the member lookup form to load member {{member_id}}'s record so the savings balance is displayed",
+      "locator": {
+        "strategy": "role",
+        "value": "Search Member",
+        "fallback": null
+      },
+      "value": null,
+      "output_name": null,
+      "risk": "safe",
+      "timeout_ms": 5000
+    },
+    {
+      "id": "step_5",
+      "action": "click",
+      "description": "Submit the member lookup form to retrieve member {{member_id}}'s record and display the savings balance",
+      "locator": {
+        "strategy": "role",
+        "value": "Search Member",
+        "fallback": null
+      },
+      "value": null,
+      "output_name": null,
+      "risk": "safe",
+      "timeout_ms": 5000
+    },
+    {
+      "id": "step_6",
+      "action": "type",
+      "description": "Enter the requested member ID so the member record (and savings balance) can be retrieved",
+      "locator": {
+        "strategy": "label",
+        "value": "Member ID",
+        "fallback": null
+      },
+      "value": "{{member_id}}",
+      "output_name": null,
+      "risk": "safe",
+      "timeout_ms": 5000
+    },
+    {
+      "id": "step_7",
+      "action": "click",
+      "description": "Submit the member lookup form to retrieve member {{member_id}}'s record and show the savings balance",
+      "locator": {
+        "strategy": "role",
+        "value": "Search Member",
+        "fallback": null
+      },
+      "value": null,
+      "output_name": null,
+      "risk": "safe",
+      "timeout_ms": 5000
+    },
+    {
+      "id": "step_8",
+      "action": "extract",
+      "description": "Grab the member's savings balance from the element with id 'savings-balance'",
+      "locator": {
+        "strategy": "css",
+        "value": "#savings-balance",
+        "fallback": null
+      },
+      "value": null,
+      "output_name": "savings_balance",
+      "risk": "safe",
+      "timeout_ms": 5000
+    }
+  ],
+  "success_checkpoint": {
+    "description": "Member Details page is displayed.",
+    "locator": {
+      "strategy": "css",
+      "value": "h1",
+      "fallback": null
+    },
+    "expected_text": "Member Details"
+  },
+  "metadata": {
+    "source": "llm_discovery",
+    "discovery_goal": "Look up member {{member_id}} and read their current savings balance.",
+    "contains_runtime_secrets": false
+  }
+}
